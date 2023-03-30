@@ -1,0 +1,53 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>About Me</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  <ion-content>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/home" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Home
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/location" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="location-outline"></ion-icon>
+          Localidade
+          </ion-item>
+        </ion-menu-toggle>
+  </ion-content>
+  </ion-menu>
+  
+    <ion-header id="main-content">
+      <ion-toolbar class = "header">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>About Me</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+  <ion-content>
+  <ion-avatar>
+    <img src="../../assets/mine.PNG"/>
+  </ion-avatar>
+
+    <ion-label>
+      <h1>Diogo Bernardes</h1>
+    </ion-label>
+ 
+    <ion-card>
+      <ion-card-content>
+       Chamo-me Diogo Bernardes, tenho 22 anos e resido em Atães, Vila Verde, Braga. 
+       <br>Desde que me lembro que o desporto faz parte da minha vida, pratiquei futebol federado durante 11 anos e atualmente prático ginásio 
+       regularmente. Para além do desporto, a informática e a programação sempre foi algo pela qual me interessei, motivo pelo qual decidi seguir
+       os meus estudos nessa área.<br>
+       Atualmente, tenho um CTESP em Programação Sistemas Informáticos realizado no IPMAIA e estou a tirar a Licenciatura em Engenharia Informática
+       no IPVC, sendo que o meu principal objetivo neste momento é concluir a Licenciatura com sucesso.
+      </ion-card-content>
+    </ion-card>
+</ion-content>
+</ion-app>

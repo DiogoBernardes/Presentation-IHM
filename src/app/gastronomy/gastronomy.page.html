@@ -1,0 +1,81 @@
+<ion-app>
+  <ion-menu contentId="main-content" auto-hide="true">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Gastronomy</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  <ion-content>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/home" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Home
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/presentation" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          About Me
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/location" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="location-outline"></ion-icon>
+          Location
+          </ion-item>
+        </ion-menu-toggle>
+  </ion-content>
+  </ion-menu>
+
+  <ion-header id="main-content">
+    <ion-toolbar class = "header">
+      <ion-icon slot="start" name="chevron-back-outline" routerLink ="/location"></ion-icon>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Gastronomy</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <img [src]="mainImage" class = "img_principal">
+        </ion-col>
+      </ion-row>
+      <!-- Loop pelas imagens secundárias -->
+      <ion-row>
+        <ng-container *ngFor="let image of secondaryImages; let i = index;">
+          <!-- Cada imagem é exibida em uma coluna com tamanho 3 -->
+          <!-- Se o índice da imagem for divisível por 3, exibe em uma nova linha -->
+          <ion-col size="3" *ngIf="i % 3 === 0">
+            <img [src]="mainImage"  class = "img_secundaria">
+          </ion-col>
+          <ion-col size="3" *ngIf="i % 3 === 0">
+            <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
+          </ion-col>
+          <!-- Se o índice da imagem for divisível por 3 + 1, exibe na mesma linha da anterior -->
+          <ion-col size="3" *ngIf="i % 3 === 1">
+            <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria"> 
+          </ion-col>
+          <!-- Se o índice da imagem for divisível por 3 + 2, exibe na mesma linha das anteriores -->
+          <ion-col size="3" *ngIf="i % 3 === 2">
+            <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
+          </ion-col>
+        </ng-container>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-card>
+      <ion-card-content>
+      A gastronomia de Atães é muito própria da região minhota, conhecida pelos seus pratos e ingredientes tradicionais.
+      <br>Alguns desses pratos passam por cozido à portuguesa, caldo verde, bacalhau à Braga, etc..
+      <br>Para além destes pratos, está região também é conhecida pela sua produção de vinho verde, produzindo mesmo alguns dos melhores do país.
+      <br>Em geral a culinária desta região é caracterizada pelos seus pratos robustos e saborosos, onde frequentemente são servidos
+      com carne de porco, vaca, frango e bacalhau, acompanhados por uma variedade de legumes e leguminosas e o copo de vinho para acompanhar.
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-app>

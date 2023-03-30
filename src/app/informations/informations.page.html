@@ -1,0 +1,61 @@
+<ion-app>
+  <ion-menu contentId="main-content" auto-hide="true">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Informations</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  <ion-content>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/home" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Home
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/presentation" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          About Me
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/location" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="location-outline"></ion-icon>
+          Location
+          </ion-item>
+        </ion-menu-toggle>
+  </ion-content>
+  </ion-menu>
+
+  <ion-header id="main-content">
+    <ion-toolbar class = "header">
+      <ion-icon slot="start" name="chevron-back-outline" routerLink ="/location"></ion-icon>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Informations</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content>
+    <img src="../../assets/Portugal_location_map.svg.png" class="map"/>
+    <ion-list>
+      <ion-item *ngFor="let item of items" (click)="showContent(item)" style = "--background: var(--ion-color-header); ">
+        {{ item.title }}
+      </ion-item>
+      <ion-item *ngIf="selectedItem" style = "--background: var(--ion-color-background-app);">
+        <ion-card>
+          <ion-card-header style = "color: black">
+         <h2>   {{ selectedItem.title }} </h2>
+          </ion-card-header>
+          <ion-card-content>
+            {{ selectedItem.content }}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
+
+</ion-app>

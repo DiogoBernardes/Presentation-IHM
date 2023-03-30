@@ -1,0 +1,33 @@
+ion-menu::part(backdrop) {
+    background-color: rgba(255, 0, 255, 0.5);
+  }
+  
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+  
+    box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+  }
+  
+  ion-content{
+    --background: var(--ion-color-header);
+   
+  }
+
+  .header{
+    --background: var(--ion-color-background-app);
+  }
+
+.escudo {
+    transform: translate(70%, 25%);
+    width: 150px;
+    height: 150px;
+}
+
+ion-card{
+    top:5%;
+    display: flex;
+    flex-flow: column-reverse;
+    --background: var(--ion-color-background-app);
+    color:rgb(196, 164, 164);
+}
+

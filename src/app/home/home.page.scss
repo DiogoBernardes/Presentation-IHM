@@ -1,0 +1,25 @@
+.my-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button-fp{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  --background: var(--ion-color-black-button);
+}
+.card {
+  --background: var(--ion-color-card);
+  background: var(--ion-color-card);
+  color:black;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,80 @@
+<ion-app>
+  <ion-menu contentId="main-content" auto-hide="true">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Location</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  <ion-content>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/home" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Home
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/presentation" style = "--background: var(--ion-color-header);">
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          About Me
+          </ion-item>
+        </ion-menu-toggle>
+  </ion-content>
+  </ion-menu>
+
+  <ion-header id="main-content">
+    <ion-toolbar class = "header">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Location</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <img src="../../assets/ataes.gif" class = "escudo">
+          <ion-card>
+            <ion-card-content>
+            Atães é uma freguesia do concelho de Vila Verde, localizada na região do Minho em Portugal. 
+            Tem uma área de aproximadamente 4,5 km² e uma população de cerca de 1.500 habitantes.
+            <br>A economia local é baseada principalmente na agricultura, com destaque para a produção de vinho verde, legumes e frutas. 
+            <br>Atães é uma freguesia bastante rural e tranquila, com algumas casas antigas de granito e ruas estreitas de paralelo, no entanto nos 
+            ultimos anos tem se vindo a desenvolver.
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-button routerLink="/informations" style = "--background:--ion-color-header;">
+            <ion-icon slot="end" name="information-outline"></ion-icon>
+            Informações
+          </ion-button>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-button routerLink="/gastronomy" style = "--background:--ion-color-header;">
+            <ion-icon slot="end" name="restaurant-outline"></ion-icon>
+            Gastronomia 
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-button routerLink="/accommodation" style = "--background:--ion-color-header;">
+            <ion-icon slot="end" name="bed-outline"></ion-icon>
+            Alojamento
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+</ion-app>
