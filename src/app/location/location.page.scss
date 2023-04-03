@@ -22,14 +22,13 @@ ion-menu::part(backdrop) {
     width: 150px;
     height: 150px;
 }
-
 ion-card{
-    top:5%;
     display: flex;
     flex-flow: column-reverse;
     --background: var(--ion-color-background-app);
     color:rgb(196, 164, 164);
 }
+
 
 .description{
   color:white;

@@ -42,3 +42,10 @@ ion-menu::part(backdrop) {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   }
+    
+ion-card{
+  flex-flow: column-reverse;
+  --background: var(--ion-color-background-app);
+  color:rgb(196, 164, 164);
+}
+
