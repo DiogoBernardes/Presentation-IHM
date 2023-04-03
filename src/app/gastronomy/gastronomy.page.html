@@ -47,29 +47,16 @@
       <!-- Loop pelas imagens secundárias -->
       <ion-row>
         <ng-container *ngFor="let image of secondaryImages; let i = index;">
-          <!-- Cada imagem é exibida em uma coluna com tamanho 3 -->
-          <!-- Se o índice da imagem for divisível por 3, exibe em uma nova linha -->
-          <ion-col size="3" *ngIf="i % 3 === 0">
-            <img [src]="mainImage"  class = "img_secundaria">
+          <ion-col size="3">
+          <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
           </ion-col>
-          <ion-col size="3" *ngIf="i % 3 === 0">
-            <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
-          </ion-col>
-          <!-- Se o índice da imagem for divisível por 3 + 1, exibe na mesma linha da anterior -->
-          <ion-col size="3" *ngIf="i % 3 === 1">
-            <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria"> 
-          </ion-col>
-          <!-- Se o índice da imagem for divisível por 3 + 2, exibe na mesma linha das anteriores -->
-          <ion-col size="3" *ngIf="i % 3 === 2">
-            <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
-          </ion-col>
-        </ng-container>
+      </ng-container>
       </ion-row>
     </ion-grid>
 
 
     <ion-card>
-      <ion-card-content>
+      <ion-card-content class="description">
       A gastronomia de Atães é muito própria da região minhota, conhecida pelos seus pratos e ingredientes tradicionais.
       <br>Alguns desses pratos passam por cozido à portuguesa, caldo verde, bacalhau à Braga, etc..
       <br>Para além destes pratos, está região também é conhecida pela sua produção de vinho verde, produzindo mesmo alguns dos melhores do país.

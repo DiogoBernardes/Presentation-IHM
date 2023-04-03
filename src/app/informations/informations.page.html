@@ -41,16 +41,25 @@
   <ion-content>
     <img src="../../assets/Portugal_location_map.svg.png" class="map"/>
     <ion-list>
-      <ion-item *ngFor="let item of items" (click)="showContent(item)" style = "--background: var(--ion-color-header); ">
+      <ion-item *ngFor="let item of items" (click)="showContent(item)" class="mainTitle">
         {{ item.title }}
       </ion-item>
       <ion-item *ngIf="selectedItem" style = "--background: var(--ion-color-background-app);">
         <ion-card>
-          <ion-card-header style = "color: black">
+          <ion-card-header class = "titulo">
          <h2>   {{ selectedItem.title }} </h2>
           </ion-card-header>
-          <ion-card-content>
-            {{ selectedItem.content }}
+          <ion-card-content class="description" >
+            <ng-container *ngIf="selectedItem.title === 'Serviços'">
+              <ul>
+                <li *ngFor="let contentItem of selectedItem.content">
+                  {{ contentItem }}
+                </li>
+              </ul>
+            </ng-container>
+            <ng-container *ngIf="selectedItem.title !== 'Serviços'">
+              {{ selectedItem.content }}
+            </ng-container>
           </ion-card-content>
         </ion-card>
       </ion-item>

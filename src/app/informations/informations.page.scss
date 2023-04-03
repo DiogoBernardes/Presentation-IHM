@@ -27,3 +27,21 @@ ion-menu::part(backdrop) {
     height: 350px;
     padding-bottom: 50px;
 }
+.mainTitle{
+  --background: var(--ion-color-header);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+.titulo{
+  text-decoration: underline;
+  padding-left: 30px;
+  font-size: 20px;
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.description{
+color:black;
+font-size: 15px;
+font-family: Arial, Helvetica, sans-serif;
+}

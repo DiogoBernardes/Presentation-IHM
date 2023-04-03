@@ -49,31 +49,18 @@
     <!-- Loop pelas imagens secundárias -->
     <ion-row>
       <ng-container *ngFor="let image of secondaryImages; let i = index;">
-        <!-- Cada imagem é exibida em uma coluna com tamanho 3 -->
-        <!-- Se o índice da imagem for divisível por 3, exibe em uma nova linha -->
-        <ion-col size="3" *ngIf="i % 3 === 0">
-          <img [src]="mainImage" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
+        <ion-col size="3">
+        <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
         </ion-col>
-        <ion-col size="3" *ngIf="i % 3 === 0">
-          <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
-        </ion-col>
-        <!-- Se o índice da imagem for divisível por 3 + 1, exibe na mesma linha da anterior -->
-        <ion-col size="3" *ngIf="i % 3 === 1">
-          <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria"> 
-        </ion-col>
-        <!-- Se o índice da imagem for divisível por 3 + 2, exibe na mesma linha das anteriores -->
-        <ion-col size="3" *ngIf="i % 3 === 2">
-          <img [src]="secondaryImages[i]" (click)="changeMainImage(secondaryImages[i])" class = "img_secundaria">
-        </ion-col>
-      </ng-container>
+    </ng-container>
     </ion-row>
   </ion-grid>
   <ion-card>
    <h2 class="titulo">Casa da Torre</h2>
-    <ion-card-content>
-      - Casa de férias com Piscina, situado numa propriedade com 6000 m2.
-    <br>- Salas amplas com dois ambientes separados, sala de jantar, convívio e ainda sala de divertimentos com bilhar e outros jogos de família.
-    <br>- Dispõe relvado para prática de futebol, Churrasqueira no exterior e forno, ginásio interior, e uma magnífica vista panorâmica.
+    <ion-card-content class="description">
+      - Casa de férias com Piscina, situado numa propriedade com 6000 m2.<br>
+    <br>- Salas amplas com dois ambientes separados, sala de jantar, convívio e ainda sala de divertimentos com bilhar e outros jogos de família.<br>
+    <br>- Dispõe relvado para prática de futebol, Churrasqueira no exterior e forno, ginásio interior, e uma magnífica vista panorâmica.<br>
     <br>- Dispõe ainda de zona no exterior para refeições, jardim ou alpendre.
     </ion-card-content>
   </ion-card>
