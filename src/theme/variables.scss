@@ -75,13 +75,7 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
-  /** Header **/
-  --ion-color-header: #43a2ea;
-	--ion-color-header-rgb: 67,162,234;
-	--ion-color-header-contrast: #000000;
-	--ion-color-header-contrast-rgb: 0,0,0;
-	--ion-color-header-shade: #3b8fce;
-	--ion-color-header-tint: #56abec;
+
 
   /** Black-Button **/
   --ion-color-black-button: #383838;
@@ -99,7 +93,15 @@
 	--ion-color-background-app-shade: #223b54;
 	--ion-color-background-app-tint: #3d5670;
 
-  /** Background-app **/
+   /** Header **/
+  --ion-color-header: #43a2ea;
+  --ion-color-header-rgb: 67,162,234;
+  --ion-color-header-contrast: #000000;
+  --ion-color-header-contrast-rgb: 0,0,0;
+  --ion-color-header-shade: #3b8fce;
+  --ion-color-header-tint: #56abec;
+  
+    /** Background-app **/
   --ion-color-header-app: #084D6E;
 	--ion-color-header-app-rgb: 8,77,110;
 	--ion-color-header-app-contrast: #ffffff;
